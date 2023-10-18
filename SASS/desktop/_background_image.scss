@@ -1,0 +1,24 @@
+    /*Define la imagen de fondo y el tamaño - Establece que no se repita*/
+    .inicio_backgroundImage{
+        background-image: url(../Imagenes/tablasnavegando.jpg);
+        background-size: cover;
+    }
+    .servicio_backgroundImage{
+        background-image: url(../Imagenes/Esquiadorenlamontana.jpg);
+    }
+    .sobrenosotros_backgroundImage{
+        background-image: url(../Imagenes/kiterenmar.jpg);
+    }
+    .beneficios_backgroundImage{
+        background-image: url(../Imagenes/hickerenmontanahorizontal.jpg);
+        background-position: center;
+    }
+    .contactanos_backgroundImage{
+        background-image: url(../Imagenes/rapelconmontana.jpg);
+    }
+    .iniciarsesion_backgroundImage{
+        background-image: url(../Imagenes/kayakenmar.png);
+    }
+    .donaciones_backgroundImage{
+        background-image: url(../Imagenes/hickerdonacionesenlamontana.png);
+    }

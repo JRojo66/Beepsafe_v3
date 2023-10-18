@@ -1,0 +1,9 @@
+/* Mobile horizontal - Tablet*/
+@media only screen and (min-width: 500px) and (max-width:991px){
+   @import "../../SASS/tablet/background_image";
+   @import "../../SASS/tablet/navegador";
+   @import "../../SASS/tablet/seccion_principal";
+   @import "../../SASS/tablet/contactanos";
+   @import "../../SASS/tablet/iniciar_sesion";
+   @import "../../SASS/tablet/footer";
+}

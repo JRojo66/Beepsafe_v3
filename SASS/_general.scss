@@ -1,0 +1,35 @@
+/* Definición de las variables*/
+/* color beepsafe*/
+$color_beepsafe: #5DFDCB;
+/* tamano logos*/
+$tamano_logo_vertical: 50px;
+$tamano_logo_tablet: 70px;
+$tamano_logo_desktop: 121px;
+$tamano_logo_donaciones_vertical: 80px;
+$tamano_logo_donaciones_tabletydesktop_width:296px;
+$tamano_logo_donaciones_tabletydesktop_heigth:283px;
+/* Tipos de letra*/
+$font_contactanos_inicio_sesion: 'Poppins', sans-serif;
+$font_general: Jura;
+$font_texto_inicio: Paytone One;
+/*color de fondo para las letras del texto principal*/
+$color_fondo_letras: rgb(182, 182, 182, 0.4);
+
+/* Definiciones comunes para todos los formatos de pantalla*/
+/* Define el tamaño de todas las imagenes de fondo y establece que no se repitan*/
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Define el tipo de letra general para todas las páginas*/
+.p_texto{
+    font-family: Jura;
+    text-align: justify;
+}
+
+/* Mixins*/
+@mixin size($width, $heigth){
+    width: $width;
+    height: $heigth;
+}

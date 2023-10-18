@@ -1,0 +1,57 @@
+/*Define el formato de la seccion prinicipal*/
+/* Define el formato del texto BIENVENIDOS*/
+.titulo{
+    font-family: $font_texto_inicio;
+    font-size: 17vw;
+    margin-left: -4vw;
+    color: $color_beepsafe;
+    overflow: hidden;
+}
+    /* Define el tipo, color, tamaño, alineamiento y posición del texto*/
+    .p_texto{
+        font-size: 20px;
+        font-family: Jura;
+        text-align: justify;
+    }
+    .p_texto_inicio{
+        color: black;
+        background-color: $color_fondo_letras;
+        font-weight: bold;
+        width: 50vw;
+        margin-top:40vh;
+        margin-left: 50px;
+    }
+    .p_texto_servicio{
+        color: black;
+        background-color: $color_fondo_letras;
+        font-weight: bold;
+        width: 600px;
+        margin-top: 40vh;
+        margin-left: 50px;
+    }
+    .p_texto_sobrenosotros{
+        color: black;
+        background-color: $color_fondo_letras;
+        font-weight: bold;
+        width: 20%;
+        margin-top: 30vh;
+        margin-left: 50px;
+    }
+    .p_texto_beneficios1, .p_texto_beneficios2{
+        color: white;
+        background-color: $color_fondo_letras;
+        width: 40%;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+    /* Define el formato de texto del párrafo de la página donaciones*/
+    .p_texto_donaciones{
+        font-family: $font_general;
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+        @include size(394px, 300px);
+        margin-left: 96px;
+        margin-top: 18%;
+        height: 1000px;
+    }

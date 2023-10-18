@@ -1,0 +1,37 @@
+/* Define el formato, tamaño y posición del formulario de la pagina contactanos*/
+.form_contactanos{
+    background-color: white;
+    border-radius: 24px;
+    border: none;
+    width: 55vw;
+    height: 500px;
+    margin-left: 103px;
+    margin-top: 16%;
+}
+/* Define el formato del texto del formulario de contactenos*/
+form input{
+    font-family: $font_contactanos_inicio_sesion;
+    font-size: 20px;
+    border: none;
+    margin: 30px;
+}
+/* Define el formato del area del mensaje del formulario de contactenos*/
+form textarea{
+    font-family: $font_contactanos_inicio_sesion;
+    font-size: 20px;
+    border: none;
+    margin: 30px;
+    max-width: 50vw;
+}
+/* Define el formato del boton de enviar de los formularios de las paginas contactanos e iniciar sesión*/
+.boton, .boton_iniciarsesion{
+    background-color: $color_beepsafe;
+    border-radius: 15px;
+    text-decoration: bold;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+    background-color: grey;
+    }
+}

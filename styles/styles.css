@@ -1,0 +1,934 @@
+@charset "UTF-8";
+/* Definición de las variables*/
+/* color beepsafe*/
+/* tamano logos*/
+/* Tipos de letra*/
+/*color de fondo para las letras del texto principal*/
+/* Definiciones comunes para todos los formatos de pantalla*/
+/* Define el tamaño de todas las imagenes de fondo y establece que no se repitan*/
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Define el tipo de letra general para todas las páginas*/
+.p_texto {
+  font-family: Jura;
+  text-align: justify;
+}
+
+/* Mixins*/
+/*Mobile*/
+@media only screen and (max-width: 500px) {
+  /*Define la imagen de fondo para cada página*/
+  .inicio_backgroundImage {
+    background-image: url(../Imagenes/tablasnavegandocelvert.jpg);
+  }
+  .servicio_backgroundImage {
+    background-image: url(../Imagenes/Esquiadorenlamontanacelvertical.jpg);
+  }
+  .sobrenosotros_backgroundImage {
+    background-image: url(../Imagenes/kiterenmarcelvertical.jpg);
+  }
+  .beneficios_backgroundImage {
+    background-image: url(../Imagenes/hickerenmontanacelvertical.jpg);
+  }
+  .contactanos_backgroundImage {
+    background-image: url(../Imagenes/rapelconmontanacelvertical.jpg);
+  }
+  .iniciarsesion_backgroundImage {
+    background-image: url(../Imagenes/kayakenmarcelvertical.jpg);
+  }
+  .donaciones_backgroundImage {
+    background-image: url(../Imagenes/bordelagocelvertical.jpg);
+  }
+  /* Define el tamaño del logo del header*/
+  .logo {
+    max-width: 50px;
+    max-height: 50px;
+  }
+  .container_header {
+    display: flex;
+    background-color: #5DFDCB;
+    align-items: top;
+  }
+  .item2 {
+    width: 100vw;
+  }
+  /* Rellenan el color de fondo del header*/
+  .navbar {
+    padding: 0px;
+  }
+  /* Define la posición y el color de fondo de la hamburguesa*/
+  .navbar-toggler {
+    position: absolute;
+    right: 8vw;
+    top: 0;
+    background-color: #5DFDCB;
+  }
+  /* Define la disposición y posición de los elementos del menú*/
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: #5DFDCB;
+  }
+  /* Define el color de fondo del header - Elimina el gap blanco entre el logo y el menú de navegación*/
+  .headercolor {
+    background-color: #5DFDCB;
+  }
+  .titulo {
+    display: none;
+  }
+  /* Define el alto de la sección media */
+  .texto {
+    height: 440px;
+  }
+  /* Define los ajustes del texto para cada página*/
+  .p_texto {
+    width: 200px;
+    margin-left: 50px;
+  }
+  .p_texto_inicio {
+    color: black;
+    font-weight: bolder;
+    background-color: rgba(182, 182, 182, 0.4);
+    margin-top: 60%;
+  }
+  .p_texto_sobrenosotros {
+    color: white;
+    background-color: rgba(182, 182, 182, 0.4);
+    margin-top: 60%;
+  }
+  .p_texto_servicio_celvert {
+    color: white;
+    background-color: rgba(182, 182, 182, 0.4);
+    margin-top: 34%;
+    width: 70vw;
+  }
+  .p_texto_beneficios1 {
+    color: black;
+    background-color: rgba(182, 182, 182, 0.4);
+    margin-top: 40%;
+  }
+  .p_texto_beneficios2 {
+    color: white;
+    background-color: rgba(182, 182, 182, 0.4);
+    margin-top: 40%;
+  }
+  .p_texto_donaciones {
+    font-family: Jura;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    width: 240px;
+    height: 510px;
+    margin-left: 32px;
+    margin-top: 24%;
+  }
+  /* Define el formato, tamaño y posición del formulario de la pagina contactanos*/
+  .form_contactanos {
+    background-color: white;
+    border-radius: 24px;
+    border: none;
+    width: 85%;
+    height: 500px;
+    margin-left: 3%;
+    margin-top: 36%;
+  }
+  /* Define el formato del texto del formulario de contactenos*/
+  form input {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    border: none;
+    margin: 30px;
+    width: 72%;
+  }
+  /* Define el formato del area del mensaje del formulario de contactenos*/
+  form textarea {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    border: none;
+    margin: 30px;
+    width: 72%;
+  }
+  /* Define el formato del boton de enviar de los formularios de las paginas contactanos e iniciar sesión*/
+  /*Define el extend que uso de base para el boton de contactanos e iniciar sesion*/
+  .boton_iniciarsesion, .boton {
+    background-color: #5DFDCB;
+    border-radius: 15px;
+    text-decoration: bold;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .boton_iniciarsesion:hover, .boton:hover {
+    background-color: grey;
+  }
+  .boton_iniciarsesion {
+    margin-top: 7%;
+    width: 50%;
+  }
+  /* Define el formato, tamaño y posición del cuadro del formulario de la pagina iniciar sesión*/
+  .forminiciarsesion {
+    background-color: white;
+    border-radius: 24px;
+    border: none;
+    width: 95%;
+    height: 320px;
+    margin-left: 2%;
+    margin-top: 10%;
+  }
+  /* Define el formato del boton de registrarse para los que no tienen cuenta*/
+  .notenescuenta {
+    font-family: Jura;
+    background-color: white;
+    opacity: 60%;
+    margin-left: 23%;
+    margin-top: 2%;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+  }
+  /* Define el tamaño de los iconos de redes y el alto del footer de la página donaciones*/
+  .redes_layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    width: 50vh;
+    gap: 0px;
+    bottom: 5vh;
+  }
+  .redes_layout a img {
+    width: 25px;
+    height: 25px;
+    margin: 0 20px;
+  }
+  /* Define la disrtibucion y posicion de los iconos de las redes en la página de beneficios*/
+  .redes_layout_beneficios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 5vh;
+    left: 80vw;
+  }
+  .redes_layout_beneficios a img {
+    width: 25px;
+    height: 25px;
+    margin: 0 20px;
+  }
+  /* Define la disrtibucion y posicion de los iconos de las redes en la página de contactanos*/
+  .redes_layout_contactanos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 5vh;
+    left: 80vw;
+  }
+  .redes_layout_contactanos a img {
+    width: 25px;
+    height: 25px;
+    margin: 0 20px;
+  }
+  /* Define el color de fondo del footer de donaciones y lo que queda de pantalla por debajo*/
+  .redes_layout_donaciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+    background-color: #5DFDCB;
+    height: 8vh;
+    width: 100vw;
+  }
+  .redes_layout_donaciones a img {
+    width: 25px;
+    height: 25px;
+    margin: 0 20px;
+  }
+  /*Define la distribucion, el color de fondo, el tipo de letra y la distribucion del texto de agradecimiento y las redes en el footer de la pagina donaciones */
+  .gracias_redesdonaciones {
+    font-family: Paytone One;
+    font-size: 80px;
+    background-color: #5DFDCB;
+    width: 100vw;
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+  }
+  /* Centra el texto de Gracias por Ayudar*/
+  .gracias_redesdonaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /*Define el tamaño del texto de agradecimiento y las redes en el footer de la pagina donaciones */
+  .gracias_redesdonaciones h1 {
+    font-size: 20%;
+  }
+  /* Define el tamaño del logo del footer de las donaciones*/
+  .logofooterdonaciones {
+    width: 80px;
+    height: 80px;
+  }
+  /* Define el color de fondo del footer*/
+  .colorfooterdonaciones, .redesdonaciones {
+    background-color: #5DFDCB;
+  }
+  .colorfooterdonaciones {
+    display: flex;
+  }
+}
+/* Mobile horizontal - Tablet*/
+@media only screen and (min-width: 500px) and (max-width: 991px) {
+  /* Define el alto de la sección media */
+  .inicio_backgroundImage {
+    background-image: url(../Imagenes/tablasnavegando.jpg);
+  }
+  .servicio_backgroundImage {
+    background-image: url(../Imagenes/Esquiadorenlamontana.jpg);
+  }
+  .sobrenosotros_backgroundImage {
+    background-image: url(../Imagenes/kiterenmar.jpg);
+  }
+  .beneficios_backgroundImage {
+    background-image: url(../Imagenes/hickerenmontanahorizontal.jpg);
+  }
+  .contactanos_backgroundImage {
+    background-image: url(../Imagenes/rapelconmontana.jpg);
+  }
+  .iniciarsesion_backgroundImage {
+    background-image: url(../Imagenes/kayakenmar.jpg);
+  }
+  .donaciones_backgroundImage {
+    background-image: url(../Imagenes/hickerdonacionesenlamontana.png);
+  }
+  /* Define el tamaño del logo en el header */
+  .logo {
+    max-width: 70px;
+    max-height: 70px;
+  }
+  .container_header {
+    display: flex;
+    background-color: #5DFDCB;
+    align-items: top;
+  }
+  .item2 {
+    width: 82vw;
+  }
+  /* Rellenan el color de fondo del header*/
+  .navbar {
+    padding: 0px;
+  }
+  .nav-item {
+    margin: 0;
+  }
+  /* Define la posicón y el color de fondo de la hamburguesa*/
+  .navbar-toggler {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #5DFDCB;
+  }
+  /* Define el formato de los botones del navegador*/
+  .nav-link {
+    font-family: Jura;
+    font-weight: bold;
+    font-size: auto;
+    color: black;
+    text-decoration: none;
+  }
+  /* Define la disposición de los elementos del menú de navegación*/
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: #5DFDCB;
+  }
+  .headercolor {
+    background-color: #5DFDCB;
+  }
+  /* Define el formato del botón Iniciar Sesion*/
+  .nav-link__iniciar_sesion {
+    font-family: Jura;
+    color: #5DFDCB;
+    background-color: black;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 31px;
+    padding: 11px 18px 15px 18px;
+    border-radius: 12%;
+  }
+  .nav-link__iniciar_sesion_gris {
+    font-family: Jura;
+    color: #5DFDCB;
+    background-color: grey;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 31px;
+    padding: 11px 18px 15px 18px;
+    border-radius: 12%;
+  }
+  /*Define el formato de la seccion prinicipal*/
+  /* Define el formato del texto BIENVENIDOS*/
+  .titulo {
+    font-family: Paytone One;
+    font-size: 17vw;
+    margin-left: -4vw;
+    color: #5DFDCB;
+    overflow: hidden;
+  }
+  /* Define el tipo, color, tamaño, alineamiento y posición del texto*/
+  .p_texto {
+    font-size: 20px;
+    font-family: Jura;
+    text-align: justify;
+  }
+  .p_texto_inicio {
+    color: black;
+    font-weight: bold;
+    background-color: rgba(182, 182, 182, 0.4);
+    width: 50vw;
+    margin-top: 40vh;
+    margin-left: 5vh;
+  }
+  .p_texto_servicio {
+    color: black;
+    font-weight: bold;
+    background-color: rgba(182, 182, 182, 0.4);
+    width: 40vw;
+    margin-left: 5vw;
+    margin-top: 25vh;
+  }
+  .p_texto_sobrenosotros {
+    color: black;
+    font-weight: bold;
+    background-color: rgba(182, 182, 182, 0.4);
+    width: 30%;
+    margin-top: 28%;
+  }
+  .p_texto_beneficios1, .p_texto_beneficios2 {
+    color: white;
+    background-color: rgba(182, 182, 182, 0.4);
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  .p_texto_donaciones {
+    font-family: Jura;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    width: 394px;
+    height: 500px;
+    margin-left: 40px;
+    margin-top: 12%;
+  }
+  /* Define el formato, tamaño y posición del formulario de la pagina contactanos*/
+  .form_contactanos {
+    background-color: white;
+    border-radius: 24px;
+    border: none;
+    width: 40%;
+    height: 50%;
+    margin-left: 103px;
+    margin-top: 30%;
+  }
+  /* Define el formato del texto del formulario de contactenos*/
+  form input {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    width: 80%;
+    border: none;
+    margin-top: 6%;
+    margin-bottom: 1%;
+    margin-left: 3%;
+  }
+  /* Define el formato del area del mensaje del formulario de contactenos*/
+  form textarea {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    width: 80%;
+    border: none;
+    margin: 5% 0 25% 3%;
+  }
+  /*Define el extend que uso de base para el boton de contactanos e iniciar sesion*/
+  .boton_iniciarsesion, .boton {
+    background-color: #5DFDCB;
+    border-radius: 15px;
+    text-decoration: bold;
+    margin-top: 4%;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+  }
+  /* Define el formato del boton de enviar de los formularios de las paginas contactanos e iniciar sesión*/
+  .boton:hover {
+    background-color: grey;
+  }
+  .boton_iniciarsesion {
+    width: 50%;
+    margin-top: 7%;
+  }
+  /* Define el formato del boton de enviar del formulario de la pagina iniciar sesión cuando pasa el cursor por encima*/
+  .boton_iniciarsesion:hover {
+    background-color: grey;
+  }
+  /* Define el formato, tamaño y posición del cuadro del formulario de la pagina iniciar sesión*/
+  .forminiciarsesion {
+    background-color: white;
+    border-radius: 24px;
+    border: none;
+    width: 50%;
+    height: 40%;
+    margin-top: 20%;
+    margin-left: 25%;
+  }
+  /* Define el formato del boton de registrarse para los que no tienen cuenta*/
+  .notenescuenta {
+    font-family: Jura;
+    background-color: white;
+    opacity: 60%;
+    margin-left: 39%;
+    margin-top: 2%;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+  }
+  /*Define la distribucion, el tamaño de los iconos de redes, la separación y el alto del footer*/
+  .redes_layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+  }
+  .redes_layout a img {
+    width: 40px;
+    height: 40px;
+    margin: 5vh 20px;
+  }
+  /*Define la distribucion, el tamaño de los iconos de redes, la separación y el alto del footer*/
+  .redes_layout_servicios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+  }
+  .redes_layout_servicios a img {
+    width: 40px;
+    height: 40px;
+    margin: 5vh 20px;
+  }
+  /* Define la distribucion de los iconos de las redes - Posiciona en la página de beneficios*/
+  .redes_layout_beneficios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 45vh;
+    left: 90%;
+  }
+  .redes_layout_beneficios a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+  }
+  /* Define la distribucion de los iconos de las redes - Posiciona en la página de contactanos*/
+  .redes_layout_contactanos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 45vh;
+    left: 90%;
+  }
+  .redes_layout_contactanos a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+  }
+  /* Define el color de fondo del footer de donaciones y lo que queda de pantalla por debajo*/
+  .redes_layout_donaciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+    background-color: #5DFDCB;
+    height: 8vh;
+    width: 100vw;
+  }
+  .redes_layout_donaciones a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+  }
+  /*Define la distribucion, el color de fondo, el tipo de letra y la distribucion del texto de agradecimiento y las redes en el footer de la pagina donaciones */
+  .gracias_redesdonaciones {
+    font-family: Paytone One;
+    font-size: 60vw;
+    background-color: #5DFDCB;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+  /*Define el tamaño del texto de agradecimiento y las redes en el footer de la pagina donaciones */
+  .gracias_redesdonaciones h1 {
+    font-size: 4vw;
+    width: 75vw;
+    height: 10vh;
+    justify-content: center;
+  }
+  /* Define el tamaño del logo del footer de las donaciones*/
+  .logofooterdonaciones {
+    width: 20vw;
+    height: 20vw;
+  }
+  /* Define el color de fondo del footer*/
+  .colorfooterdonaciones, .redesdonaciones {
+    background-color: #5DFDCB;
+  }
+  .colorfooterdonaciones {
+    display: flex;
+  }
+}
+/*Desktop*/
+@media only screen and (min-width: 992px) {
+  /*Define la imagen de fondo y el tamaño - Establece que no se repita*/
+  .inicio_backgroundImage {
+    background-image: url(../Imagenes/tablasnavegando.jpg);
+    background-size: cover;
+  }
+  .servicio_backgroundImage {
+    background-image: url(../Imagenes/Esquiadorenlamontana.jpg);
+  }
+  .sobrenosotros_backgroundImage {
+    background-image: url(../Imagenes/kiterenmar.jpg);
+  }
+  .beneficios_backgroundImage {
+    background-image: url(../Imagenes/hickerenmontanahorizontal.jpg);
+    background-position: center;
+  }
+  .contactanos_backgroundImage {
+    background-image: url(../Imagenes/rapelconmontana.jpg);
+  }
+  .iniciarsesion_backgroundImage {
+    background-image: url(../Imagenes/kayakenmar.png);
+  }
+  .donaciones_backgroundImage {
+    background-image: url(../Imagenes/hickerdonacionesenlamontana.png);
+  }
+  /* Define el tamaño del logo en el header */
+  .logo {
+    max-width: 121px;
+    max-height: 121px;
+  }
+  .container_header {
+    display: flex;
+    background-color: #5DFDCB;
+    align-items: center;
+  }
+  .item2 {
+    width: 100vw;
+  }
+  /* Rellenan el color de fondo del header - PREGUNTAR*/
+  .navbar {
+    padding: 0px;
+  }
+  .nav-item {
+    margin: 0;
+  }
+  /* Define el formato de los botones del navegador*/
+  .nav-link {
+    font-family: Jura;
+    font-weight: bold;
+    font-size: auto;
+    color: black;
+    text-decoration: none;
+  }
+  .nav-link:hover {
+    transform: scale(1.2, 1.2);
+  }
+  /* Define el formato del botón Iniciar Sesion*/
+  .nav-link_iniciar_sesion {
+    font-family: Jura;
+    color: #5DFDCB;
+    background-color: black;
+    font-size: auto;
+    text-decoration: none;
+    margin-top: 31px;
+    padding: 11px 18px 15px 18px;
+    border-radius: 12%;
+  }
+  .nav-link_iniciar_sesion:hover {
+    padding: 13px 20px 17px 20px;
+  }
+  .nav-link_iniciar_sesion_gris {
+    font-family: Jura;
+    color: #5DFDCB;
+    background-color: grey;
+    font-size: auto;
+    text-decoration: none;
+    margin-top: 31px;
+    padding: 11px 18px 15px 18px;
+    border-radius: 12%;
+  }
+  /* Define la posición de la hamburguesa*/
+  .navbar-toggler {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background-color: #5DFDCB;
+  }
+  /* Define la disposición de los elementos del menú de navegación*/
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: #5DFDCB;
+  }
+  /*Define el formato de la seccion prinicipal*/
+  /* Define el formato del texto BIENVENIDOS*/
+  .titulo {
+    font-family: Paytone One;
+    font-size: 17vw;
+    margin-left: -4vw;
+    color: #5DFDCB;
+    overflow: hidden;
+  }
+  /* Define el tipo, color, tamaño, alineamiento y posición del texto*/
+  .p_texto {
+    font-size: 20px;
+    font-family: Jura;
+    text-align: justify;
+  }
+  .p_texto_inicio {
+    color: black;
+    background-color: rgba(182, 182, 182, 0.4);
+    font-weight: bold;
+    width: 50vw;
+    margin-top: 40vh;
+    margin-left: 50px;
+  }
+  .p_texto_servicio {
+    color: black;
+    background-color: rgba(182, 182, 182, 0.4);
+    font-weight: bold;
+    width: 600px;
+    margin-top: 40vh;
+    margin-left: 50px;
+  }
+  .p_texto_sobrenosotros {
+    color: black;
+    background-color: rgba(182, 182, 182, 0.4);
+    font-weight: bold;
+    width: 20%;
+    margin-top: 30vh;
+    margin-left: 50px;
+  }
+  .p_texto_beneficios1, .p_texto_beneficios2 {
+    color: white;
+    background-color: rgba(182, 182, 182, 0.4);
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  /* Define el formato de texto del párrafo de la página donaciones*/
+  .p_texto_donaciones {
+    font-family: Jura;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    width: 394px;
+    height: 300px;
+    margin-left: 96px;
+    margin-top: 18%;
+    height: 1000px;
+  }
+  /* Define el formato, tamaño y posición del formulario de la pagina contactanos*/
+  .form_contactanos {
+    background-color: white;
+    border-radius: 24px;
+    border: none;
+    width: 55vw;
+    height: 500px;
+    margin-left: 103px;
+    margin-top: 16%;
+  }
+  /* Define el formato del texto del formulario de contactenos*/
+  form input {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    border: none;
+    margin: 30px;
+  }
+  /* Define el formato del area del mensaje del formulario de contactenos*/
+  form textarea {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    border: none;
+    margin: 30px;
+    max-width: 50vw;
+  }
+  /* Define el formato del boton de enviar de los formularios de las paginas contactanos e iniciar sesión*/
+  .boton, .boton_iniciarsesion {
+    background-color: #5DFDCB;
+    border-radius: 15px;
+    text-decoration: bold;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .boton:hover, .boton_iniciarsesion:hover {
+    background-color: grey;
+  }
+  /* Define el formato, tamaño y posición del cuadro del formulario de la pagina iniciar sesión*/
+  .container_forminiciarsesion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 15vh;
+    width: 100vw;
+  }
+  .forminiciarsesion {
+    background-color: white;
+    border-radius: 24px;
+    border: none;
+    width: 717px;
+    height: 320px;
+    align-self: center;
+  }
+  /* Define el formato del boton de registrarse para los que no tienen cuenta*/
+  .notenescuenta {
+    font-family: Jura;
+    background-color: white;
+    opacity: 60%;
+    align-self: center;
+    margin-top: 2%;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+  }
+  /*Define la distribucion, el tamaño de los iconos de redes, la separación y el alto del footer*/
+  .redes_layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+  }
+  .redes_layout a img {
+    width: 40px;
+    height: 40px;
+    margin: 2vh 20px;
+  }
+  .redes_layout_servicios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+  }
+  .redes_layout_servicios a img {
+    width: 40px;
+    height: 40px;
+    margin: 7vh 20px;
+  }
+  /* Define el color de fondo del footer de donaciones y lo que queda de pantalla por debajo*/
+  .redes_layout_donaciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+    background-color: #5DFDCB;
+    height: 8vh;
+  }
+  .redes_layout_donaciones a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+  }
+  /* Define la distribucion de los iconos de las redes - Posiciona en la página de beneficios*/
+  .redes_layout_beneficios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 30vh;
+    right: 2vw;
+  }
+  .redes_layout_beneficios a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+  }
+  /* Define la distribucion de los iconos de las redes - Posiciona en la página de contactanos*/
+  .redes_layout_contactanos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 30vh;
+    right: 2vw;
+  }
+  .redes_layout_contactanos a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+  }
+  /*Define la distribucion, el color de fondo, el tipo de letra y la distribucion del texto de agradecimiento y las redes en el footer de la pagina donaciones */
+  .gracias_redesdonaciones {
+    font-family: Paytone One;
+    background-color: #5DFDCB;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+  /*Define el tamaño del texto de agradecimiento y las redes en el footer de la pagina donaciones */
+  .gracias_redesdonaciones h1 {
+    width: 75vw;
+    font-size: 4vw;
+    justify-content: center;
+  }
+  /* Define el tamaño del logo del footer de las donaciones*/
+  .logofooterdonaciones {
+    margin-left: 4%;
+    width: 20vw;
+    height: 20vw;
+  }
+  /* Define el color de fondo del footer*/
+  .colorfooterdonaciones, .redesdonaciones {
+    background-color: #5DFDCB;
+  }
+  .colorfooterdonaciones {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

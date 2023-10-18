@@ -1,0 +1,22 @@
+    /* Define el formato, tamaño y posición del cuadro del formulario de la pagina iniciar sesión*/
+    .forminiciarsesion{
+        background-color: white;
+        border-radius: 24px;
+        border: none;
+        @include size(50%, 40%);
+        margin-top: 20%;
+        margin-left: 25%;
+    }
+    /* Define el formato del boton de registrarse para los que no tienen cuenta*/
+    .notenescuenta{
+        font-family: $font_general;
+        background-color: white;
+        opacity: 60%;
+        margin-left: 39%;
+        margin-top:2%;
+        border: none;
+        border-radius: 15px;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+    }
