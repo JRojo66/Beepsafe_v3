@@ -43,6 +43,7 @@
         font-size: 20px;
         color: black;
         font-weight: bold;
+        background-color: $color_fondo_letras;
         @include size(240px, 510px);
         margin-left: 32px;
         margin-top: 36%;
